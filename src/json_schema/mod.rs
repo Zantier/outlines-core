@@ -188,7 +188,6 @@ pub fn regex_from_value(
     max_recursion_depth: Option<usize>,
 ) -> Result<String> {
     let mut parser = parsing::Parser::new(json);
-    if let Some(pattern) = whitespace_pattern {
         parser = parser.with_whitespace_pattern(pattern)
     }
     if let Some(depth) = max_recursion_depth {
